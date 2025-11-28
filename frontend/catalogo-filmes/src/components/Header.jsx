@@ -10,7 +10,6 @@ export default function Header({ onAbrirModal }) {
 
       <nav>
         <Link className="header-link" to="/">Home</Link>
-        {/* botão que abre o modal em vez de navegar a /novo */}
         <button
           onClick={onAbrirModal}
           className="header-link btn-abrir-modal"

@@ -87,7 +87,6 @@ body {
   background: #504e4e;
 }
 
-/* DETALHE */
 .detalhes-container {
   display: flex;
   padding: 20px;
@@ -123,7 +122,6 @@ body {
   z-index: 9999;
 }
 
-/* Modal box */
 .modal {
   background: #111;
   color: white;
@@ -135,7 +133,7 @@ body {
   box-shadow: 0 10px 40px rgba(0,0,0,0.7);
 }
 
-/* Close button */
+
 .modal-close {
   position: absolute;
   right: 12px;
@@ -147,7 +145,7 @@ body {
   cursor: pointer;
 }
 
-/* Form inside modal */
+
 .form-modal input {
   display: block;
   width: 100%;

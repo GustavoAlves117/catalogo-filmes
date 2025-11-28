@@ -39,10 +39,10 @@ export default function Home() {
     carregarCatalogo();
     carregarMinhaLista();
 
-    // Atualiza quando lista de favoritos mudar
+  
     window.addEventListener("listaAtualizada", carregarMinhaLista);
 
-    // Atualiza catálogo quando novo filme é adicionado via modal
+  
     window.addEventListener("filmeAdicionado", carregarCatalogo);
 
     return () => {
@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <div className="home-container">
 
-      {/* Minha lista */}
+      
       {minhaLista.length > 0 && (
         <section>
           <h2>Minha Lista</h2>
@@ -66,7 +66,7 @@ export default function Home() {
         </section>
       )}
 
-      {/* Catálogo completo */}
+    
       <section>
         <h2>Catálogo Completo</h2>
         <div className="catalogo">

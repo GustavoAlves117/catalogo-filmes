@@ -5,13 +5,12 @@ export default function FilmeCard({ filme }) {
   const navigate = useNavigate();
   const [salvo, setSalvo] = useState(false);
 
-  // Verifica se o filme está salvo quando o componente monta
   useEffect(() => {
     const lista = JSON.parse(localStorage.getItem("lista")) || [];
     setSalvo(lista.includes(filme._id));
   }, [filme._id]);
 
-  // 🔥 Reage quando a lista for atualizada fora daqui (outro card adicionou)
+
   useEffect(() => {
     function atualizarEstado() {
       const lista = JSON.parse(localStorage.getItem("lista")) || [];
@@ -29,18 +28,18 @@ export default function FilmeCard({ filme }) {
     const lista = JSON.parse(localStorage.getItem("lista")) || [];
 
     if (salvo) {
-      // remover da lista
+
       const novaLista = lista.filter(id => id !== filme._id);
       localStorage.setItem("lista", JSON.stringify(novaLista));
       setSalvo(false);
     } else {
-      // adicionar
+    
       lista.push(filme._id);
       localStorage.setItem("lista", JSON.stringify(lista));
       setSalvo(true);
     }
 
-    // 🔥 Notifica o Home e outros cards
+   
     window.dispatchEvent(new Event("listaAtualizada"));
   }
 

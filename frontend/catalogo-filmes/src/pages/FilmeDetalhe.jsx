@@ -8,7 +8,7 @@ export default function FilmeDetalhe() {
   const [filme, setFilme] = useState(null);
   const [abrirModal, setAbrirModal] = useState(false);
 
-  // Campos de edição
+
   const [titulo, setTitulo] = useState("");
   const [ano, setAno] = useState("");
   const [generos, setGeneros] = useState("");
@@ -26,7 +26,7 @@ export default function FilmeDetalhe() {
       .then((data) => {
         setFilme(data);
 
-        // Preenche o modal com os valores atuais
+     
         setTitulo(data.titulo);
         setAno(data.ano);
         setGeneros(data.generos.join(", "));
@@ -117,7 +117,7 @@ export default function FilmeDetalhe() {
         </div>
       </div>
 
-      {/* MODAL DE EDIÇÃO */}
+
       {abrirModal && (
         <div className="modal-overlay">
           <div className="modal">
