@@ -9,16 +9,13 @@
 
 .logo-header {
     width: 200px;
-    height: auto;
-    object-fit: contain;
     border-radius: 8px;
     cursor: pointer;
 }
 
-nav {
+.nav-menu {
     display: flex;
     gap: 15px;
-    flex-wrap: wrap;
 }
 
 .header-link {
@@ -27,47 +24,49 @@ nav {
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.2s;
+    text-decoration: none;
 }
 
 .header-link:hover {
     background-color: #504e4e;
 }
 
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: white;
+}
+
 @media (max-width: 768px) {
-    .header {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
         flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px;
+        width: 100%;
+        background: #6d6d6d;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+        gap: 10px;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .header-link {
+        width: 100%;
+        padding: 12px;
+        text-align: center;
     }
 
     .logo-header {
         width: 150px;
-    }
-
-    nav {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .header-link {
-        padding: 10px 14px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .header-link {
-        width: 100%;
-        max-width: 250px;
     }
 }
