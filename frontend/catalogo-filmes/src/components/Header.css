@@ -34,15 +34,6 @@ nav {
     background-color: #504e4e;
 }
 
-
-.btn-abrir-modal {
-    background-color: #3a6ff7;
-}
-
-.btn-abrir-modal:hover {
-    background-color: #2d55c9;
-}
-
 @media (max-width: 768px) {
     .header {
         flex-direction: column;

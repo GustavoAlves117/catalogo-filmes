@@ -11,10 +11,8 @@ export default function Header({ onAbrirModal }) {
 
       <nav>
         <Link className="header-link" to="/">Home</Link>
-        <Link
-          onClick={onAbrirModal}
-          className="header-link btn-abrir-modal"
-        >
+        <Link className="header-link" to="/minha-lista">Minha Lista</Link>
+        <Link onClick={onAbrirModal} className="header-link btn-abrir-modal">
           Adicionar Filme
         </Link>
       </nav>

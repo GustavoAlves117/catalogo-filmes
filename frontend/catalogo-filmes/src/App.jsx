@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import FilmeDetalhe from "./pages/FilmeDetalhe";
 import Header from "./components/Header";
 import NovoFilme from "./pages/NovoFilme"; 
+import MinhaLista from "./pages/MinhaLista"; 
 
 export default function App() {
   const [abrirModal, setAbrirModal] = useState(false);
@@ -15,6 +16,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/minha-lista" element={<MinhaLista />} />
         <Route path="/filme/:id" element={<FilmeDetalhe />} />
        
       </Routes>
