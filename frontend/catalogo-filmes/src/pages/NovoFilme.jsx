@@ -1,4 +1,5 @@
 import { useState } from "react";
+import api from "../api";
 
 export default function NovoFilme({ onClose }) {
   const [form, setForm] = useState({
@@ -40,14 +41,7 @@ export default function NovoFilme({ onClose }) {
     };
 
     try {
-      const resp = await fetch("http://localhost:5000/filmes", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-
-      if (!resp.ok) throw new Error("Erro ao cadastrar");
-
+      await api.post("/filmes", payload);
       window.dispatchEvent(new Event("filmeAdicionado"));
       onClose();
     } catch (err) {

@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import api from "../api";
 
 export default function FilmeDetalhe() {
   const { id } = useParams();
@@ -7,7 +8,6 @@ export default function FilmeDetalhe() {
 
   const [filme, setFilme] = useState(null);
   const [abrirModal, setAbrirModal] = useState(false);
-
 
   const [titulo, setTitulo] = useState("");
   const [ano, setAno] = useState("");
@@ -21,12 +21,9 @@ export default function FilmeDetalhe() {
   const [trailer, setTrailer] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/filmes/${id}`)
-      .then((resp) => resp.json())
-      .then((data) => {
+    api.get(`/filmes/${id}`)
+      .then(({ data }) => {
         setFilme(data);
-
-     
         setTitulo(data.titulo);
         setAno(data.ano);
         setGeneros(data.generos.join(", "));
@@ -38,18 +35,14 @@ export default function FilmeDetalhe() {
         setCapa(data.capa);
         setTrailer(data.trailer);
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   }, [id]);
 
   async function deletarFilme() {
-    const deseja = window.window?.confirm("Tem certeza que deseja excluir?");
-
+    const deseja = window.confirm("Tem certeza que deseja excluir?");
     if (!deseja) return;
 
-    await fetch(`http://localhost:5000/filmes/${id}`, {
-      method: "DELETE",
-    });
-
+    await api.delete(`/filmes/${id}`);
     navigate("/");
   }
 
@@ -57,22 +50,17 @@ export default function FilmeDetalhe() {
     const atualizado = {
       titulo,
       ano,
-      generos: generos.split(",").map((g) => g.trim()),
+      generos: generos.split(",").map(g => g.trim()),
       duracao,
       diretor,
-      elenco: elenco.split(",").map((e) => e.trim()),
+      elenco: elenco.split(",").map(e => e.trim()),
       nota,
       sinopse,
       capa,
       trailer,
     };
 
-    await fetch(`http://localhost:5000/filmes/${id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(atualizado),
-    });
-
+    await api.put(`/filmes/${id}`, atualizado);
     setFilme(atualizado);
     setAbrirModal(false);
   }
@@ -117,13 +105,10 @@ export default function FilmeDetalhe() {
         </div>
       </div>
 
-
       {abrirModal && (
         <div className="modal-overlay">
           <div className="modal">
-            <button className="modal-close" onClick={() => setAbrirModal(false)}>
-              X
-            </button>
+            <button className="modal-close" onClick={() => setAbrirModal(false)}>X</button>
 
             <h2>Editar Filme</h2>
 
