@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./FilmeCard.css";
 
 export default function FilmeCard({ filme }) {
   const navigate = useNavigate();

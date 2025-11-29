@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import "./FilmeDetalhe.css";
 import api from "../api";
 
 export default function FilmeDetalhe() {
@@ -85,7 +86,7 @@ export default function FilmeDetalhe() {
 
         {filme.trailer && (
           <a
-            className="btn"
+            className="btn trailerbtn"
             href={filme.trailer}
             target="_blank"
             rel="noreferrer"

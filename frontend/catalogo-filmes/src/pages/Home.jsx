@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import FilmeCard from "../components/FilmeCard";
 import api from "../api";
+import "./Home.css";
 
 export default function Home() {
   const [catalogo, setCatalogo] = useState([]);

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../api";
+import "./NovoFilme.css";
 
 export default function NovoFilme({ onClose }) {
   const [form, setForm] = useState({

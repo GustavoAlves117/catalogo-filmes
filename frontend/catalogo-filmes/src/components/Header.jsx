@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import icon from "../assets/icon.png";
+import "./Header.css";
 
 export default function Header({ onAbrirModal }) {
   return (
