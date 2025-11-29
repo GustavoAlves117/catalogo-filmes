@@ -6,7 +6,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
-    
+
 .logo-header {
     width: 200px;
     height: auto;
@@ -37,21 +37,37 @@ nav {
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    nav {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 10px;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
     }
 
     .logo-header {
         width: 150px;
     }
 
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
     .header-link {
-        padding: 8px 12px;
+        padding: 10px 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .header-link {
+        width: 100%;
+        max-width: 250px;
     }
 }
