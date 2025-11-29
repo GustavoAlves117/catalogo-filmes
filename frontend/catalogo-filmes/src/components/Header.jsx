@@ -10,18 +10,12 @@ export default function Header({ onAbrirModal }) {
 
       <nav>
         <Link className="header-link" to="/">Home</Link>
-        <button
+        <Link
           onClick={onAbrirModal}
           className="header-link btn-abrir-modal"
-          style={{
-            color: "white",
-            border: "1px solid rgba(255,255,255,0.15)",
-            borderRadius: "6px",
-            cursor: "pointer"
-          }}
         >
           Adicionar Filme
-        </button>
+        </Link>
       </nav>
     </header>
   );
