@@ -2,7 +2,7 @@
 
 <h2>Descrição</h2>
 <p>
-Projeto completo composto por Frontend (React) e Backend (Node.js + Express + MongoDB). O sistema permite cadastrar, listar, editar e excluir filmes, além de exibir detalhes, capa, trailer e outras informações. Esta versão do projeto já está configurada com as URLs de deploy (backend e banco online). Para rodar localmente, é necessário alterar as URLs e configurar um MongoDB local.
+Projeto completo composto por Frontend (React) e Backend (Node.js + Express + MongoDB). O sistema permite cadastrar, listar, editar e excluir filmes, além de exibir detalhes como capa, trailer e outras informações ao clicar no card do filme. Também possui a funcionalidade de adicionar filmes à lista pessoal do usuário, armazenada no LocalStorage. Esta versão do projeto já está configurada com as URLs de deploy (backend e banco online). Para rodar localmente, é necessário alterar as URLs e configurar um MongoDB local.
 </p>
 
 <p>
