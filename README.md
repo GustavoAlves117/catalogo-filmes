@@ -5,6 +5,10 @@
 Projeto completo composto por Frontend (React) e Backend (Node.js + Express + MongoDB). O sistema permite cadastrar, listar, editar e excluir filmes, além de exibir detalhes, capa, trailer e outras informações. Esta versão do projeto já está configurada com as URLs de deploy (backend e banco online). Para rodar localmente, é necessário alterar as URLs e configurar um MongoDB local.
 </p>
 
+<p>
+  As plataformas escolhidas para deploy foram: Vercel ([Frontend](https://catalogo-filmes-cyan.vercel.app/)), Render ([Backend](https://catalogo-filmes-70u2.onrender.com)) e Mongo Atlas (Banco de dados)
+</p>
+
 <h2>Instalação</h2>
 
 <p>1. Clone o repositório:</p>
