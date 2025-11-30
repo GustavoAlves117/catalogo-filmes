@@ -9,6 +9,10 @@ Projeto completo composto por Frontend (React) e Backend (Node.js + Express + Mo
   As plataformas escolhidas para deploy foram: Vercel ([Frontend](https://catalogo-filmes-cyan.vercel.app/)), Render ([Backend](https://catalogo-filmes-70u2.onrender.com)) e Mongo Atlas (Banco de dados)
 </p>
 
+<p>
+  Ao acessar o site pelo Vercel, aguarde alguns segundos para que o backend hospedado no Render inicie, garantindo que o conteúdo seja carregado corretamente.
+</p>
+
 <h2>Instalação</h2>
 
 <p>1. Clone o repositório:</p>
