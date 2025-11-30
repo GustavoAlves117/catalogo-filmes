@@ -2,32 +2,13 @@
 
 <h2>Descrição</h2>
 <p>
-Projeto completo composto por Frontend (React) e Backend (Node.js + Express + MongoDB).
-O sistema permite cadastrar, listar, editar e excluir filmes, além de exibir detalhes, capa,
-trailer e outras informações.
+Projeto completo composto por Frontend (React) e Backend (Node.js + Express + MongoDB). O sistema permite cadastrar, listar, editar e excluir filmes, além de exibir detalhes, capa, trailer e outras informações. Esta versão do projeto já está configurada com as URLs de deploy (backend e banco online). Para rodar localmente, é necessário alterar as URLs e configurar um MongoDB local.
 </p>
-
-<h2>Estrutura do Repositório</h2>
-<pre>
-/backend
-    src/
-        server.js
-        routes/
-        models/
-        controllers/
-    package.json
-
-/frontend
-    catalogo-filmes/
-        src/
-        public/
-        package.json
-</pre>
 
 <h2>Instalação</h2>
 
 <p>1. Clone o repositório:</p>
-<pre>git clone https://github.com/seu-repositorio/catalogo-filmes</pre>
+<pre>git clone https://github.com/GustavoAlves117/catalogo-filmes.git</pre>
 
 <p>2. Instale as dependências do backend:</p>
 <pre>
@@ -41,12 +22,12 @@ cd ../frontend/catalogo-filmes
 npm install
 </pre>
 
-<h2>Configuração do Backend</h2>
-<p>Crie um arquivo <code>.env</code> dentro da pasta <code>backend</code> com:</p>
+<h2>Configuração para rodar localmente (LocalHost): </h2>
+<p>Se necessário, edite o arquivo <code>backend/src/.env </code> com:</p>
 
 <pre>
-MONGO_URI=sua_string_de_conexao
-PORT=3000
+MONGO_URI=sua_string_de_conexao_do_banco_de_dados
+PORT=5000
 </pre>
 
 <h2>Execução</h2>
@@ -56,7 +37,7 @@ PORT=3000
 <pre>node src/server.js</pre>
 
 <p>Servidor ficará acessível em:</p>
-<pre>http://localhost:3000</pre>
+<pre>http://localhost:5000</pre>
 
 <h3>Rodar o Frontend</h3>
 <p>Dentro de <code>frontend/catalogo-filmes</code>:</p>
