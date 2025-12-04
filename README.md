@@ -30,6 +30,20 @@ cd ../frontend/catalogo-filmes
 npm install
 </pre>
 
+<h2>Dependências necessárias</h2>
+
+<p>O backend utiliza variáveis de ambiente. Para isso, é necessário instalar o pacote <strong>dotenv</strong>:</p>
+
+<pre>
+npm install dotenv
+</pre>
+
+<p>Certifique-se de importar o dotenv no início do arquivo principal do backend (ex: <code>server.js</code>):</p>
+
+<pre>
+require("dotenv").config();
+</pre>
+
 <h2>Configuração para rodar localmente (LocalHost): </h2>
 <p>Se necessário, edite o arquivo <code>backend/src/.env </code> com:</p>
 
